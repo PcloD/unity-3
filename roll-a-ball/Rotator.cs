@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+// Rotate an object
 public class Rotator : MonoBehaviour 
 {
 	void Update()
