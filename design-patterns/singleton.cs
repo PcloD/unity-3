@@ -8,25 +8,23 @@ using System.Collections;
 public class SingletonClass : MonoBehaviour {
 
   // static attribute will hold the instance
-	public static SingletonClass instance = null;
+  public static SingletonClass instance = null;
 
   // static method to get the instance
-	public static SingletonClass getInstance()
-	{
-		return instance;
-	}
+  public static SingletonClass getInstance()
+  {
+  	return instance;
+  	
+  }
 
   // Setting the instance or destroying the object
-	void Awake()
-	{
-		if (instance == null)
-			instance = this;
-		else if (instance != this)
-			Destroy (gameObject);
-
-    // if this is the instance, don't destroy it
-		DontDestroyOnLoad(gameObject);
-	}
+  void Awake()
+  {
+  	if (instance == null) instance = this;
+  	else if (instance != this) Destroy (gameObject);
+  	// if this is the instance, don't destroy it
+  	DontDestroyOnLoad(gameObject);
+  }
 }
 
 /*
