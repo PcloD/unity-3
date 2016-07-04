@@ -1,5 +1,6 @@
 /*
   Restricts the Instantiation of a class to ONE object
+  Also gives an interface to access the object using static methods and attributes
 */
 
 using UnityEngine;
@@ -23,6 +24,7 @@ public class SingletonClass : MonoBehaviour {
   	if (instance == null) instance = this;
   	else if (instance != this) Destroy (gameObject);
   	// if this is the instance, don't destroy it
+  	// this is optional
   	DontDestroyOnLoad(gameObject);
   }
 }
