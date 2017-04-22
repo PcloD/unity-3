@@ -22,7 +22,7 @@ void Update() {
 				if (Mathf.Abs(lastTouch.y - firstTouch.y) > dragDistance)      // checking if it's a drag
 				{
 					if(lastTouch.y > firstTouch.y) {                       // checking if it's an up swipe
-						DoSomething()
+					  DoSomething()
 					} else if (lastTouch.y < firstTouch.y) {               // checking if it's a down swipe
 					  DoSomething()
 					}
