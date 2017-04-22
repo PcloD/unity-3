@@ -6,7 +6,7 @@
 void Update() {
 
 	#if UNITY_ANDROID
-		if(Input.touchCount == 1)                                                     // screen is touched
+		if(Input.touchCount == 1)                                                      // screen is touched
 		{
 			Touch touch = Input.GetTouch(0);
 
@@ -19,11 +19,11 @@ void Update() {
 				lastTouch = touch.position;
 
 				// checking if it is a drag
-				if (Mathf.Abs(lastTouch.y - firstTouch.y) > dragDistance)                 // checking if it's a drag
+				if (Mathf.Abs(lastTouch.y - firstTouch.y) > dragDistance)      // checking if it's a drag
 				{
-					if(lastTouch.y > firstTouch.y) {                                        // checking if it's an up swipe
+					if(lastTouch.y > firstTouch.y) {                       // checking if it's an up swipe
 						DoSomething()
-					} else if (lastTouch.y < firstTouch.y) {                                // checking if it's a down swipe
+					} else if (lastTouch.y < firstTouch.y) {               // checking if it's a down swipe
 					  DoSomething()
 					}
 				}
